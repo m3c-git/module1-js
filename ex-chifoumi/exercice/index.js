@@ -79,14 +79,6 @@ if(choiceUser === "ciseaux" && computerChoice  === "feuille"){
 
 
 
-if(choiceUser === "feuille" && computerChoice  === "feuille"){
-    alert("Egalité")
-}
-
-if(choiceUser === "pierre" && randomChoice  === "pierre"){
-    alert("Egalité")
-}
-
-if(choiceUser === "ciseaux" && randomChoice  === "ciseaux"){
+if(choiceUser === computerChoice){
     alert("Egalité")
 }
