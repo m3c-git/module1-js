@@ -27,7 +27,18 @@ let randomChoice = Math.ceil(Math.random() * 3); // Retourne un nombre aléatoir
 const feuille = 1;
 const pierre = 2;
 const ciseaux = 3;
+let computerChoice =""
+if(randomChoice === 1){
+    computerChoice = "feuille"
+}
 
+if(randomChoice === 2){
+    computerChoice = "pierre"
+}
+
+if(randomChoice === 3){
+    computerChoice = "ciseaux"
+}
 /**************************************************************/
 /*                        Main Program                        */
 /**************************************************************/
@@ -35,8 +46,47 @@ const ciseaux = 3;
 // Le code du programme à écrire ici...
 
 let choiceUser = prompt("Choisissez entre feuille, pierre ou ciseaux !");
-while(choiceUser != "feuille" || choiceUser != "pierre" || choiceUser != "ciseaux"){
+while(choiceUser !== "feuille" && choiceUser !== "pierre" && choiceUser !== "ciseaux"){
+    alert(choiceUser);
     choiceUser = prompt("Choisissez en feuille, pierre ou ciseaux !");
 }
 
+if(computerChoice === "feuille" && choiceUser === "pierre"){
+    alert("Vous avez perdu !!!")
+}
 
+if(computerChoice === "pierre" && choiceUser === "ciseaux"){
+    alert("Vous avez perdu !!!")
+}
+
+if(computerChoice === "ciseaux" && choiceUser === "feuille"){
+    alert("Vous avez perdu !!!")
+}
+
+
+
+if(choiceUser === "feuille" && computerChoice  === "pierre"){
+    alert("Vous avez gagné !!!")
+}
+
+if(choiceUser === "pierre" && computerChoice  === "ciseaux"){
+    alert("Vous avez gagné !!!")
+}
+
+if(choiceUser === "ciseaux" && computerChoice  === "feuille"){
+    alert("Vous avez gagné !!!")
+}
+
+
+
+if(choiceUser === "feuille" && computerChoice  === "feuille"){
+    alert("Egalité")
+}
+
+if(choiceUser === "pierre" && randomChoice  === "pierre"){
+    alert("Egalité")
+}
+
+if(choiceUser === "ciseaux" && randomChoice  === "ciseaux"){
+    alert("Egalité")
+}
