@@ -19,5 +19,37 @@ TODO
 /**************************************************************/
 /*                        Main Program                        */
 /**************************************************************/
+// Génération d'un nombre aléatoire entre 10 et 100
+let nbreATrouver = Math.ceil(Math.random() * 100) + 9;
+console.log(nbreATrouver);
+
 
 // Le code sera implémenté ici...
+
+let nbrUser = 0;
+let tours = 9;
+
+
+while(tours >= 0){
+  while(nbrUser !== nbreATrouver){
+    nbrUser = parseFloat(prompt("Trouvez le nombre entre 10 et 100"))
+    if(nbrUser < nbreATrouver){
+      alert("Plus grand. Il vous reste " + `${tours}` + " tours");
+      tours--
+    }
+    else if(nbrUser > nbreATrouver){
+      alert("Plus petit. Il vous reste " + `${tours}` + " tours");
+      tours--
+
+    }
+    else if(isNaN(nbrUser)){
+      alert("Vous devez saissir un nombre. Il vous reste " + `${tours}` + " tours");
+      tours--
+      continue
+    }
+    else{
+      alert("Vous avez Gagné en  " + `${tours}` + " tours");
+    } 
+  }
+}
+

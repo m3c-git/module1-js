@@ -30,9 +30,8 @@ console.log(nbreATrouver)
 
 let nbrUser = 0;
 
-while(nbrUser ==! nbreATrouver){
+while(nbrUser !== nbreATrouver){
   nbrUser = parseFloat(prompt("Trouvez le nombre entre 10 et 100"))
-  console.log(nbrUser)
   if(nbrUser < nbreATrouver){
     alert("Plus grand");
   }
