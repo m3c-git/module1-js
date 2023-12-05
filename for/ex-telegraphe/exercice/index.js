@@ -37,3 +37,23 @@ let codeMorse = [
 /**************************************************************/
 
 // Le code sera implémenté ici...
+
+let motUser = prompt("Que voulez-dire en Morse ?")
+let morseUSER = [] 
+
+
+for(let i = 0; i < alphabet.length; i++){
+
+  if(alphabet.includes(motUser[i]))
+  {
+    console.log("morseUSER")
+    morseUSER.push(codeMorse.indexOf(motUser[i]))
+    console.log(morseUSER)
+}
+
+  }
+
+
+
+/* articles.splice(articles.indexOf(choixClient), 1, "")
+ */
