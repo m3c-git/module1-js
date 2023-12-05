@@ -18,11 +18,11 @@
 const invites = ["ibrahim", "marc", "Mohamed", "abdelkader"]
 const listeInvites = []
 
-for(invite of invites){
+for(let invite of invites){
     if(invite.length <= 6){
         listeInvites.push(invite + " PETIT")
     }
-    else if(invite.length > 6){
+    else if(invite.length > 6 && invite.length <= 8){
         listeInvites.push(invite + " MOYEN")
     }
     else if(invite.length > 8){
