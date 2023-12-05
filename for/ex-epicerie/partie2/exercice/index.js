@@ -27,9 +27,31 @@ const articles = [
   'Bière',
   'Mouchoirs'
 ];
-
+let test = ["test"]
+console.log(test.length)
 /**************************************************************/
 /*                        Main Program                        */
 /**************************************************************/
 
 // Le code sera implémenté ici...
+
+
+let i;
+
+
+for(i = 0; articles.length > 0; i++)
+{
+  let choixClient = prompt(`Voici la liste des produits disponible ${articles}. Quesouhaitez-vous achetez ?`);
+  
+  if(articles.includes(choixClient)){
+    alert("ok")    
+    articles.splice(articles.indexOf(choixClient), 1)
+    console.log(articles);
+  }
+  else{
+    alert("article indisponible")
+  }
+
+}
+
+

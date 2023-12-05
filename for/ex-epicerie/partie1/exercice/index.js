@@ -47,16 +47,11 @@ const articles = [
 
 let choixClient = prompt(`Voici la liste des produits disponible ${articles}. Quesouhaitez-vous achetez ?`);
 
-for(let i = 0; i <= articles.length; i++){
   if(articles.includes(choixClient)){
     alert("ok")    
     articles.splice(articles.indexOf(choixClient), 1, "")
     console.log(articles);
-    break;
   }
   else{
     alert("article indisponible")
-    continue;
   }
-
-}
