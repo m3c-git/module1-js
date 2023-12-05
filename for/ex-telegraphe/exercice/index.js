@@ -41,19 +41,12 @@ let codeMorse = [
 let motUser = prompt("Que voulez-dire en Morse ?")
 let morseUSER = [] 
 
+for(let i = 0; i < motUser.length; i++){
 
-for(let i = 0; i < alphabet.length; i++){
-
-  if(alphabet.includes(motUser[i]))
-  {
-    console.log("morseUSER")
-    morseUSER.push(codeMorse.indexOf(motUser[i]))
-    console.log(morseUSER)
-}
-
+  for(let j = 0; j < alphabet.length; j++){
+    if(alphabet[j] === motUser[i]){
+      morseUSER.push(codeMorse[alphabet.indexOf(alphabet[j])])
+    }
   }
-
-
-
-/* articles.splice(articles.indexOf(choixClient), 1, "")
- */
+}
+console.log(morseUSER)
