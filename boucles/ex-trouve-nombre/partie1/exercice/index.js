@@ -25,5 +25,27 @@ IMPORTANT : Gérer le cas où l'utilisateur saisi autre chose qu'un nombre
 
 // Génération d'un nombre aléatoire entre 10 et 100
 let nbreATrouver = Math.ceil(Math.random() * 100) + 9;
-
+console.log(nbreATrouver)
 // Le code sera implémenté ici...
+
+let nbrUser = 0;
+
+while(nbrUser ==! nbreATrouver){
+  nbrUser = parseFloat(prompt("Trouvez le nombre entre 10 et 100"))
+  console.log(nbrUser)
+  if(nbrUser < nbreATrouver){
+    alert("Plus grand");
+  }
+  else if(nbrUser > nbreATrouver){
+    alert("Plus petit");
+  }
+  else if(isNaN(nbrUser)){
+    alert("Vous devez saissir un nombre");
+    continue
+  }
+  else{
+    alert("Gagné");
+  }
+  
+}
+
