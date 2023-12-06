@@ -15,6 +15,28 @@ const shoppingList = [];
 
 // TODO écrire les fonctions requises
 
+function addItem(item){
+shoppingList.push(item)
+}
+
+function displayShoppingList(){
+console.log(shoppingList)
+alert(shoppingList)
+}
+
+function removeItem(itemToRemove){
+    shoppingList.splice(shoppingList.indexOf(itemToRemove), 1);
+
+}
+
+function removeAllItems(){
+    /* for(let i = 0; i < shoppingList.length; i++){
+        shoppingList.splice(shoppingList.indexOf(i), 1);
+    } */
+    shoppingList.length = 0;
+
+}
+
 /*************************************************************************************************/
 /* ************************************** CODE PRINCIPAL *************************************** */
 /*************************************************************************************************/
@@ -31,9 +53,10 @@ addItem('Artichaut');
 displayShoppingList();
 
 // Etape 2.
-removeItem(window.prompt('Quel produit de la liste de courses souhaitez-vous supprimer ?'));
+let itemToRemove = window.prompt('Quel produit de la liste de courses souhaitez-vous supprimer ?');
+removeItem(itemToRemove);
 displayShoppingList();
-
+console.clear();
 // Etape 3.
 removeAllItems();
 displayShoppingList();
