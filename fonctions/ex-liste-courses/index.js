@@ -20,8 +20,7 @@ shoppingList.push(item)
 }
 
 function displayShoppingList(){
-console.log(shoppingList)
-alert(shoppingList)
+    console.log(shoppingList)
 }
 
 function removeItem(itemToRemove){
@@ -30,10 +29,11 @@ function removeItem(itemToRemove){
 }
 
 function removeAllItems(){
-    /* for(let i = 0; i < shoppingList.length; i++){
-        shoppingList.splice(shoppingList.indexOf(i), 1);
-    } */
+
     shoppingList.length = 0;
+    /* //Autre facon de faire
+    shoppingList.splice(0, shoppingList.length);
+ */
 
 }
 
@@ -56,7 +56,7 @@ displayShoppingList();
 let itemToRemove = window.prompt('Quel produit de la liste de courses souhaitez-vous supprimer ?');
 removeItem(itemToRemove);
 displayShoppingList();
-console.clear();
+
 // Etape 3.
 removeAllItems();
 displayShoppingList();
