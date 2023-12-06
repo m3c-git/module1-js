@@ -25,3 +25,5 @@ let toto = {
 /**************************************************************/
 
 // Le code sera implémenté ici...
+
+console.log(`Bonjour, je m'appelle ${toto.prenom} ${toto.nom}, j'ai ${toto.age} ans`)

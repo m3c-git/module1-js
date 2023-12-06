@@ -41,3 +41,21 @@ let users = [
 /**************************************************************/
 
 // Le code sera implémenté ici...
+
+
+let prenomUser = prompt("Quel est votre prenom ?").toString();
+let nomUser = prompt("Quel est votre nom ?").toString();
+let ageUser = prompt("Quel age avez-vous ?");
+Number(ageUser)
+
+
+let newUser = {
+  nom: nomUser,
+  prenom: prenomUser,
+  age: ageUser
+
+}
+
+users.push(newUser)
+
+console.log(users)
