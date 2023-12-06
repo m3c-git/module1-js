@@ -50,3 +50,14 @@ let data = {
 /**************************************************************/
 
 // Le code sera implémenté ici...
+
+/* template = template.replaceAll("{{title}}", data.title);
+template = template.replaceAll("{{text}}", data.text);
+console.log(template)
+ */
+for(key in data){
+
+  const content = data[key]
+  template = template.replaceAll("{{" + `${key}` + "}}", content)
+}
+console.log(template)
