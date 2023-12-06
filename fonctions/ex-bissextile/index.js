@@ -30,12 +30,7 @@ et qui affiche si l'année est bissextile ou non
 
 function isBissextile(annee){
 
-    while(isNaN(annee)){
-        
-        alert("Uniquement des chiffres")
-        annee = prompt("Saisisez une annee")
-    }
-
+   
     if ((annee % 4 === 0 && annee % 100 > 0) || (annee % 400 === 0)) {
 	    alert(annee + " est bissextile");
         return true;
@@ -50,5 +45,10 @@ function isBissextile(annee){
 /**************************************************************/
 
 // Le code du programme à écrire ici...
-let annee = prompt("Saisisez une annee")
+let annee;
+ while(isNaN(annee)){
+        
+        annee = prompt("Saisisez une annee")
+    }
+
 isBissextile(annee);
